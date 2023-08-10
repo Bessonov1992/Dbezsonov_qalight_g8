@@ -5,7 +5,7 @@ class human:
         if self.age < 18:
             self.favorite_drink = "juice"
     def drink(self):
-        print(f"I'm {self.__class__.__name__},my favorine drink is {self.favorite_drink}!")
+        print(f"I'm {self.__class__.__name__},my favorite drink is {self.favorite_drink}!")
 class worker(human):
     def __init__(self,age,salary):
         super().__init__(age)
