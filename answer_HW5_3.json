@@ -1,0 +1,14 @@
+{
+    "user1": {
+        "gender": "m",
+        "firstname": "Vasya",
+        "lastname": "Pupkin",
+        "age": 20
+    },
+    "user2": {
+        "gender": "f",
+        "firstname": "Vasilisa",
+        "lastname": "Pupkina",
+        "age": 21
+    }
+}
