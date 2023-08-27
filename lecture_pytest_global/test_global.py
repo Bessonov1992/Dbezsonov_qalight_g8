@@ -1,3 +1,3 @@
-def test_global(test_fixture_global):
+def test_global(fixture_global):
     print("lecture_pytest_global test executed")
 
