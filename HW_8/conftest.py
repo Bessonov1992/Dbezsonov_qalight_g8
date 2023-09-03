@@ -8,6 +8,5 @@ from webdriver_manager.chrome import ChromeDriverManager
 def chrome():
     service = Service(executable_path=ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
-    driver.get("https://demoqa.com/text-box")
     yield driver
     driver.quit()
