@@ -29,7 +29,7 @@ class RadioButton:
     def __check_button_enabled(self, xpath):
         return self.__driver.find_element(By.XPATH, xpath).is_enabled()
 
-    def __get_name(self, git):
+    def __get_name(self, xpath):
         return self.__driver.find_element(By.XPATH, xpath).text
 
     def select_yes_button(self):
