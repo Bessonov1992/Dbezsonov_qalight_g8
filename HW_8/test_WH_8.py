@@ -4,6 +4,7 @@ from Dbezsonov_qalight_g8.HW_8.page_object_radio_button import RadioButton
 class TestRadioButtons:
     answer_dict_HW_8 = {}
 
+
     def test_HW_8_yes_enable(self, chrome):
         page = RadioButton(driver=chrome)
         page.open()

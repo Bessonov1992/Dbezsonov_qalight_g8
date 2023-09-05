@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-@pytest.fixture(autouse=True, scope="session")
+@pytest.fixture(autouse=True, scope="class")
 def chrome():
     service = Service(executable_path=ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
