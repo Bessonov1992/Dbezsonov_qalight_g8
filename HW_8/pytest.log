@@ -1,11 +1,11 @@
-2023-09-05 19:09:56 INFO ====== WebDriver manager ======
-2023-09-05 19:09:56 INFO Get LATEST chromedriver version for google-chrome
-2023-09-05 19:09:56 INFO Get LATEST chromedriver version for google-chrome
-2023-09-05 19:09:56 INFO There is no [win64] chromedriver "116.0.5845.141" for browser google-chrome "116.0.5845.141" in cache
-2023-09-05 19:09:56 INFO Get LATEST chromedriver version for google-chrome
-2023-09-05 19:09:57 INFO WebDriver version 116.0.5845.96 selected
-2023-09-05 19:09:57 INFO Modern chrome version https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.96/win32/chromedriver-win32.zip
-2023-09-05 19:09:57 INFO About to download new driver from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.96/win32/chromedriver-win32.zip
-2023-09-05 19:09:57 INFO Driver downloading response is 200
-2023-09-05 19:09:57 INFO Get LATEST chromedriver version for google-chrome
-2023-09-05 19:09:57 INFO Driver has been saved in cache [C:\Users\swollow\.wdm\drivers\chromedriver\win64\116.0.5845.141]
+2023-09-05 19:14:35 INFO ====== WebDriver manager ======
+2023-09-05 19:14:35 INFO Get LATEST chromedriver version for google-chrome
+2023-09-05 19:14:35 INFO Get LATEST chromedriver version for google-chrome
+2023-09-05 19:14:35 INFO There is no [win64] chromedriver "116.0.5845.141" for browser google-chrome "116.0.5845.141" in cache
+2023-09-05 19:14:35 INFO Get LATEST chromedriver version for google-chrome
+2023-09-05 19:14:35 INFO WebDriver version 116.0.5845.96 selected
+2023-09-05 19:14:35 INFO Modern chrome version https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.96/win32/chromedriver-win32.zip
+2023-09-05 19:14:35 INFO About to download new driver from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.96/win32/chromedriver-win32.zip
+2023-09-05 19:14:36 INFO Driver downloading response is 200
+2023-09-05 19:14:36 INFO Get LATEST chromedriver version for google-chrome
+2023-09-05 19:14:36 INFO Driver has been saved in cache [C:\Users\swollow\.wdm\drivers\chromedriver\win64\116.0.5845.141]
