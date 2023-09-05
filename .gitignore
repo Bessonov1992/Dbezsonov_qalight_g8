@@ -6,3 +6,4 @@ answer_HW5_3.json
 .pytest_cache
 .idea/
 pytest.log
+__pychache__
