@@ -14,6 +14,14 @@ class PageCheckbox:
         if trigger in element.get_attribute('class'):
             element.click()
 
+    def open_list_of_folders(self, folders_list):
+        for folder in folders_list:
+            self.open_folder(folder)
+
+    def select_list_of_targets(self, targets_list):
+        for target in targets_list:
+            self.select_checkbox(target)
+
     def __choose_dischoose_checkbox(self, name, trigger):
         xpath = f'//span[text()= "{name}"]//ancestor::span/label'
         element = self.__driver.find_element(By.XPATH, xpath)
@@ -24,10 +32,10 @@ class PageCheckbox:
             if element.is_selected():
                 element.click()
 
-    def check_result(self, name):
+    def find_result(self, name):
         xpath = f'//span[@class="text-success"][text()="{name}"]'
-        element = self.__driver.find_element(By.XPATH, xpath).text
-        return element
+        result = self.__driver.find_element(By.XPATH, xpath).text
+        return result
 
     def open(self):
         self.__driver.get(self.__URL)
@@ -47,3 +55,10 @@ class PageCheckbox:
     def unselect_checkbox(self, name):
         trigger = "unselect"
         self.__choose_dischoose_checkbox(name, trigger)
+
+    def list_of_selected(self, answer: list, target_list: list):
+        for name in target_list:
+            xpath = f'//span[text()="{name}"]'
+            element = self.__driver.find_element(By.XPATH, xpath).text
+            if element.capitalize() in target_list:
+                answer.append(element)
