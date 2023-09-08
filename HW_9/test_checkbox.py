@@ -12,8 +12,6 @@ class TestCheckbox:
             page.open_folder(folder)
         for target in targets:
             page.select_checkbox(target)
-            print(page.check_result(target.lower()))
-            print(target.lower())
             assert page.check_result(target.lower()) == target.lower()
 
 
