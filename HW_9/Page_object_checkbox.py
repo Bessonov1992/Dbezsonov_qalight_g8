@@ -1,3 +1,4 @@
+from selenium.common import ElementClickInterceptedException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 
@@ -27,10 +28,20 @@ class PageCheckbox:
         element = self.__driver.find_element(By.XPATH, xpath)
         if trigger == "select":
             if not element.is_selected():
-                element.click()
+                while True:
+                    try:
+                        element.click()
+                        break
+                    except ElementClickInterceptedException:
+                        continue
         elif trigger == "unselect":
             if element.is_selected():
-                element.click()
+                while True:
+                    try:
+                        element.click()
+                        break
+                    except ElementClickInterceptedException:
+                        continue
 
     def find_result(self, name):
         xpath = f'//span[@class="text-success"][text()="{name}"]'
