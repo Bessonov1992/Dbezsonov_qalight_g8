@@ -1,3 +1,4 @@
+import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 
@@ -51,3 +52,18 @@ class LaptopPage:
     def get_last_part_of_url(self):
         url = self.__driver.current_url.split("/")
         return url[-2] + "/"
+
+    def wait_till_page_will_be_changed(self, num_page: int, max_wait_time: float, wait_time_tbw_try=0.5):
+        pagination_buttons = self.__driver.find_elements(By.XPATH, self.__pagination_buttons_xpath)
+        changed = False
+        end_time = time.monotonic() + max_wait_time
+        while changed == False or time.monotonic() < end_time:
+            for i in pagination_buttons:
+                if str(num_page) == i.text and "active" in i.get_attribute("class"):
+                    changed = True
+                    break
+                else:
+                    time.sleep(wait_time_tbw_try)
+                    continue
+        if changed == False:
+            raise ("Error")

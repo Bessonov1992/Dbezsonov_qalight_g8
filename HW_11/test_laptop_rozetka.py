@@ -1,5 +1,4 @@
-import time
-from Dbezsonov_qalight_g8.HW_11.Laptop_page_rozetka import LaptopPage
+from Dbezsonov_qalight_g8.HW_10.Laptop_page_rozetka import LaptopPage
 
 
 class TestLaptop:
@@ -28,7 +27,7 @@ class TestLaptop:
         page.open()
         page.scroll_to_pagination()
         page.go_to_page(2)
-        time.sleep(3)
+        page.wait_till_page_will_be_changed(2, 5)
         assert page.count_items_on_page() == 60
 
     def test_list_active_button_second_page(self, chrome):
@@ -36,7 +35,7 @@ class TestLaptop:
         page.open()
         page.scroll_to_pagination()
         page.go_to_page(2)
-        time.sleep(3)
+        page.wait_till_page_will_be_changed(2, 5)
         page.scroll_to_pagination()
         assert "2" in page.active_pagination_page() and len(page.active_pagination_page()) == 1
 
@@ -45,5 +44,5 @@ class TestLaptop:
         page.open()
         page.scroll_to_pagination()
         page.go_to_page(2)
-        time.sleep(3)
+        page.wait_till_page_will_be_changed(2, 5)
         assert page.get_last_part_of_url() == "page=2/"
